@@ -1,0 +1,150 @@
+:root {
+  color-scheme: dark;
+
+  --color-background: #2b2823;
+  --color-shadow: #141311;
+
+  --color-card-background: #fff1cc;
+  --color-card-main: #feda79;
+
+  --color-text-heading: #583629;
+  --color-text-main: #846357;
+  margin: 0;
+  padding: 0%;
+}
+
+/* INFO: Resets for the body */
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset anchor link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Image reset */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Heading reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  color: var(--color-text-heading);
+}
+
+body {
+  background: var(--color-background);
+  font-family: "Darumadrop One", sans-serif;
+  color: var(--color-text-main);
+  min-height: 100vh;
+  max-width: 52rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main"
+    "footer footer";
+}
+
+nav {
+  grid-area: navbar;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+}
+
+aside {
+  grid-area: sidebar;
+  position: sticky;
+  align-self: end;
+  bottom: 10rem;
+  background: var(--color-card-main);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 2px 30px var(--color-shadow);
+}
+
+.profile {
+  background: var(--color-card-background);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 10px 10px 0 0;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.handle {
+  margin-top: -0.3rem;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: var(--color-card-main);
+  background: var(--color-text-heading);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.link svg {
+  height: 2rem;
+  fill: var(--color-card-background);
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  padding: 1rem;
+}
