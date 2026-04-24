@@ -1,0 +1,50 @@
+/* INFO: Importing Golos font */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  --clr-disconnected: #ff3730;
+  --clr-connected: #00d824;
+
+  --shadow: 2px 2px 4px black;
+  --background: #000000ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  width: 100%;
+  font-family: "Loos Normal", "Golos Text", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: var(--shadow);
+}
+
+#connection-status {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: var(--background);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.connected {
+  color: var(--clr-connected);
+  opacity: 0;
+  transition: opacity 1s 2s;
+  border-color: var(--clr-connected);
+}
+
+.disconnected {
+  color: var(--clr-disconnected);
+  opacity: 1;
+  border-color: var(--clr-disconnected);
+}
