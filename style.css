@@ -130,6 +130,26 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2.5rem;
+  overflow: hidden;
+
+  span {
+    text-shadow: 0 1lh 0 #edf860;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.introduction:hover {
+  span {
+    animation: up 0.5s ease forwards;
+    animation-delay: calc(sibling-index() * 0.05s);
+  }
+}
+
+@keyframes up {
+  to {
+    transform: translateY(-1lh);
+  }
 }
 
 .title {
@@ -215,4 +235,9 @@ body {
   .picture-wrapper {
     width: 100%;
   }
+}
+
+span {
+  padding: 0;
+  margin: 0;
 }
