@@ -1,0 +1,72 @@
+/* INFO: Importing Golos font */
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  --shadow: 3px 3px 3px black;
+  --background: #000000aa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  width: 100%;
+  font-family: "Sofia Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-wrapper {
+  position: relative;
+  background: var(--background);
+  padding: 0.5rem 2rem;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  justify-content: center;
+  text-shadow: var(--shadow);
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 800;
+  letter-spacing: 7%;
+}
+
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 6px;
+  height: 6px;
+  top: -4px;
+  transform: rotate(45deg);
+}
+
+.main-wrapper::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 6px;
+  height: 6px;
+  bottom: -4px;
+  transform: rotate(45deg);
+}
+
+.clock {
+  span {
+    animation: tick 1s linear infinite;
+  }
+}
+
+@keyframes tick {
+  100% {
+    opacity: 0;
+  }
+}
