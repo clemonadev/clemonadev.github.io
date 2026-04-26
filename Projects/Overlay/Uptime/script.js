@@ -14,7 +14,7 @@ function formatTime(text) {
 
 async function getUptime() {
   if (!channel) {
-    uptimeElement.textContent = "STREAM STARTING";
+    uptimeElement.innerHTML = "<span>UNKNOWN CHANNEL</span>";
     return;
   }
 

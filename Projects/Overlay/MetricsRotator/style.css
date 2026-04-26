@@ -15,7 +15,7 @@
 }
 
 body {
-  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  min-height: 100dvh; /* Ensures the body is at least as tall as the screen */
   width: 100%;
   font-family:
     "Loos Normal", "Sofia Sans", sans-serif; /* Loos Normal for those who has it */
@@ -31,19 +31,14 @@ body {
   background: var(--background);
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+  justify-content: center;
   text-shadow: var(--shadow);
-
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+
   font-weight: 800;
   letter-spacing: 7%;
-
-  span {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
 }
 
 .main-wrapper::before {
@@ -64,4 +59,39 @@ body {
   height: 6px;
   bottom: -4px;
   transform: rotate(45deg);
+}
+
+.rotator {
+  --duration: 5s;
+
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-areas: "stack";
+  place-items: center;
+
+  span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  div {
+    grid-area: stack;
+    transform: translateY(2rem);
+    animation: showUp calc(sibling-count() * var(--duration)) ease infinite;
+    animation-delay: calc((sibling-index() - 1) * var(--duration));
+  }
+}
+
+@keyframes showUp {
+  5%,
+  35% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-2rem);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
 }

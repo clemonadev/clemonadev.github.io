@@ -5,7 +5,7 @@
   color-scheme: dark;
 
   --shadow: 3px 3px 3px black;
-  --background: #000000dd;
+  --background: #000000cc;
 }
 
 * {
@@ -26,8 +26,9 @@ body {
 
 .main-wrapper {
   position: relative;
+  height: 2rem;
+  min-width: 18ch;
   background: var(--background);
-  padding: 0.5rem 2rem;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   justify-content: center;
