@@ -1,4 +1,3 @@
-/* INFO: Importing Sofia Sans font */
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 :root {
@@ -15,10 +14,9 @@
 }
 
 body {
-  min-height: 100dvh; /* Ensures the body is at least as tall as the screen */
+  min-height: 100dvh;
   width: 100%;
-  font-family:
-    "Loos Normal", "Sofia Sans", sans-serif; /* Loos Normal for those who has it */
+  font-family: "Sofia Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,9 +76,20 @@ body {
   div {
     grid-area: stack;
     transform: translateY(2rem);
-    animation: showUp calc(sibling-count() * var(--duration)) ease infinite;
-    animation-delay: calc((sibling-index() - 1) * var(--duration));
+    animation: showUp 15s ease infinite;
   }
+}
+
+.rotator div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotator div:nth-child(2) {
+  animation-delay: var(--duration);
+}
+
+.rotator div:nth-child(3) {
+  animation-delay: calc(var(--duration) * 2);
 }
 
 @keyframes showUp {

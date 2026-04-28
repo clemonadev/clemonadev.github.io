@@ -1,4 +1,3 @@
-/* INFO: Importing Sofia Sans font */
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 :root {
@@ -15,10 +14,9 @@
 }
 
 body {
-  min-height: 100vh; /* Ensures the body is at least as tall as the screen */
+  min-height: 100vh;
   width: 100%;
-  font-family:
-    "Loos Normal", "Sofia Sans", sans-serif; /* Loos Normal for those who has it */
+  font-family: "Sofia Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
