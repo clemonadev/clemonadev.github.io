@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Sofia Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(100vw / 4);
+
+  text-shadow:
+    -0.03em -0.03em 0 #000,
+    0.03em -0.03em 0 #000,
+    -0.03em 0.03em 0 #000,
+    0.03em 0.03em 0 #000,
+    0.03em 0.08em 0 black;
+  font-weight: 900;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: float 5s ease infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+}
+
+.scroll-wrap {
+  padding: 0;
+  margin: -5px;
+  display: block;
+  height: 1em;
+  overflow-y: hidden;
+}
+
+.scroll-inner {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease-in-out;
+}
+
+.digit {
+  padding: 0;
+  height: 1em;
+  line-height: 1em;
+}
