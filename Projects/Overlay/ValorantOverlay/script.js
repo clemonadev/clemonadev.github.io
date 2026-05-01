@@ -114,6 +114,7 @@ function processMatches(data) {
   // ------------------------
   // UI updates (wins/losses)
   // ------------------------
+
   winsText.textContent = wins;
   lossText.textContent = losses;
 
@@ -130,9 +131,9 @@ function processMatches(data) {
   // ------------------------
   wrapper.classList.remove("positive", "negative");
 
-  if (rrTotal > 0) {
+  if (wins >= losses) {
     wrapper.classList.add("positive");
-  } else if (rrTotal < 0) {
+  } else {
     wrapper.classList.add("negative");
   }
 }
